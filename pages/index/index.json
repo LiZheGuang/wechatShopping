@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-card": "/miniprogram_npm/vant-weapp/card/index",
+  "van-search": "/miniprogram_npm/vant-weapp/search/index"
+  },
+  "navigationBarTitleText": "商城首页"
+}
+

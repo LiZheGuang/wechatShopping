@@ -1,0 +1,13 @@
+van-card .title-class{
+  font-size: 40rpx;
+  color: red;
+}
+
+.van-card__price{
+  font-size: 30rpx;
+  color: red;
+}
+
+.onSearchClass{
+  margin-bottom: 50rpx;
+}
