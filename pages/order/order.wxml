@@ -1,0 +1,13 @@
+<block wx:for="{{orderList.orderlist}}">
+  <van-card bindtap="clickLocation" data-id="{{item._id}}" class="listBox" price="{{item.orderPrice / 100}}" desc="{{item.abbrId.version}}"  title="{{item.orderTitle}}" thumb="{{item.abbrId.picture[0].url}}"
+  >
+    <view slot="footer">
+    <view>订单状态:{{item.status}}</view>
+
+    <view>数量:{{item.amount}}</view>
+
+    <van-button size="mini">{{item.profile}}</van-button>
+    <view>{{item.pressesId.pressName}}</view>
+  </view>
+  </van-card>
+</block>

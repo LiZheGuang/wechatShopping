@@ -1,4 +1,4 @@
-<view class='onSearchClass'>
+<view class='onSearchClass' >
 <van-search
   value="{{ value }}"
   placeholder="请输入搜索关键词"
@@ -8,11 +8,11 @@
 
   <view slot="action" bind:tap="onSearch">搜索</view>
 </van-search>
-</view>
+</view >
 
 
 <block wx:for="{{commodity.list}}">
-  <van-card  class="listBox" price="{{item.promotionPrice / 100}}" desc="{{item.describe}}" origin-price="{{item.marketRprice}}" title="{{item.title}}" thumb="{{imageUrl}}"
+  <van-card bindtap="clickLocation" data-id="{{item._id}}" class="listBox" price="{{item.promotionPrice / 100}}" desc="{{item.describe}}" origin-price="{{item.marketRprice / 100}}" title="{{item.title}}" thumb="{{item.picture[0]}}"
   />
   
 </block>

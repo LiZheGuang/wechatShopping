@@ -1,0 +1,46 @@
+<view class='detailBox'>
+  <view class='pickerImage'> 
+  <image src='{{shopDeatil.data.abbrId[0].picture[0].url}}'></image>
+  </view>
+  <view class='boxLaber'>
+    <van-cell-group>
+      <van-cell title="商品名称" value="{{shopDeatil.data.title +'--'+ shopDeatil.data.abbrId[0].title}}" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="商品类型" value="{{shopDeatil.data.category}}" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="商品描述" label="{{shopDeatil.data.describe}}" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="市场价" value="¥{{shopDeatil.data.marketRprice /100}}" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="商城价" value="¥{{shopDeatil.data.salePrice / 100}}" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="库存" value="{{shopDeatil.data.abbrId[0].repertory}}" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="出版社" value="{{shopDeatil.data.pressId.pressName}}" border="{{ false }}" />
+    </van-cell-group>
+  </view>
+  <view class='laberShop'>
+    <view class='laberShopfl'>
+      <text>商品分类</text>
+      <view class='titleList'>
+        <block wx:for="{{shopDeatil.data.abbrId}}">
+        <view class='shopTitle'>{{item.title + item.version}}</view>
+        </block>
+      </view>
+
+    </view>
+  </view>
+
+</view>
+<van-goods-action>
+  <van-goods-action-icon icon="chat" text="客服" bind:click="onClickIcon" />
+  <van-goods-action-icon icon="cart" text="购物车" bind:click="clickCarts" />
+  <van-goods-action-button text="加入购物车" type="warning" bind:click="clickPostPushCarts" />
+  <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+</van-goods-action>

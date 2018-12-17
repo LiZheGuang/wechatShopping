@@ -100,4 +100,11 @@ Page({
       title:title
     })
   },
+  clickLocation(event){
+    let goodsId = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/shopDetail/shopDetail?goodsId=' + goodsId,
+    })
+    console.log(event)
+  }
 })

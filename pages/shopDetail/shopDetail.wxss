@@ -1,0 +1,27 @@
+/* pages/shopDetail/shopDetail.wxss */
+
+.pickerImage{
+  width: 100%;
+  height: 400rpx;
+  /* background: #ebebeb; */
+}
+.pickerImage image{
+  width: 100%;
+  height: 100%;
+}
+.laberShop{
+  padding: 20rpx;
+  font-size: 30rpx;
+  height: 300rpx;
+}
+.titleList{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.titleList .shopTitle{
+    width: 44%;
+    padding: 20rpx;
+}

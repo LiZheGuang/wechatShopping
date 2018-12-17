@@ -1,0 +1,4 @@
+/* pages/orderDeatail/orderDetail.wxss */
+page{
+  background: #ebebeb;
+}

@@ -1,0 +1,10 @@
+<van-panel title="{{orderDetail.data.orderTitle}}" desc="{{orderDetail.data.version}}" status="未支付">
+  <image src='{{orderDetail.data.picture[0].url}}'></image>
+</van-panel>
+
+<van-submit-bar
+  price="{{orderDetail.data.price}}"
+  button-text="提交订单"
+  tip="数量:{{options.amount}}"
+  bind:submit="clickPostOrder"
+/>
